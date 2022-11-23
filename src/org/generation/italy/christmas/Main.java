@@ -2,6 +2,7 @@ package org.generation.italy.christmas;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 //Creare una classe Main con metodo main, in cui implementare il seguente programma: creare una nuova ArrayList dove 
 //salvare la lista dei desideri continuare a chiedere all’utente di inserire un nuovo desiderio nella lista, fino a che l’utente sceglie di fermarsi 
@@ -13,12 +14,22 @@ public class Main {
 		
 		List <String> wishList = new ArrayList<>();
 		
-		wishList.add("ciaone");
-		wishList.add("ciaone");
-		wishList.add("ciaone");
-		wishList.add("ciaone");
-		wishList.add("ciaone");
-		wishList.add("ciaone");
+		Scanner sc = new Scanner (System.in);		
+		
+		Boolean compile = false;
+		
+		while (!compile) {
+			System.out.println("Inserisci un nuovo desiderio nella lista: ");
+			String newWish = sc.next();
+			wishList.add(newWish);
+			
+			System.out.println("Vuoi fermarti qui? Digita: 's' o 'n' ");
+			String userChoice = sc.next();
+			
+			if (userChoice.equals("s")) {
+				compile =true;
+			}
+		}
 		
 		
 		System.out.println(wishList);
