@@ -40,8 +40,6 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		
-		
 		List <String> wishList = new ArrayList<>();
 		
 		Scanner sc = new Scanner (System.in);		
@@ -71,7 +69,6 @@ public class Main {
 	
 		for(String wish : wishList ) {
 			System.out.println((counter += 1) + "." + " " + wish.substring(0,1).toUpperCase() + wish.substring(1).toLowerCase());
-		}
-		
+		}	
 	}
 }
